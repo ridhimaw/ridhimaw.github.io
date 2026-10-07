@@ -121,7 +121,7 @@ radial-gradient(circle at 85% 70%,rgba(90,43,112,.17),transparent 28%),var(--ink
 .games-head{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:flex-end;gap:16px;margin-bottom:20px}
 .games-head h3{font:600 30px var(--serif);margin:0 0 6px}
 .games-head p{margin:0;color:var(--muted);max-width:560px}
-.game-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:22px}
+.game-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:20px}
 .game-card{display:flex;flex-direction:column;border:1px solid var(--line);border-radius:12px;overflow:hidden;background:rgba(8,20,38,.55);color:inherit;text-decoration:none;transition:transform .25s,border-color .25s,box-shadow .25s}
 .game-card:hover,.game-card:focus-visible{transform:translateY(-4px);border-color:var(--gold);box-shadow:0 18px 50px rgba(0,0,0,.35)}
 .game-card svg{display:block;width:100%;height:auto;aspect-ratio:16/10;background:#040d1c}
@@ -129,7 +129,7 @@ radial-gradient(circle at 85% 70%,rgba(90,43,112,.17),transparent 28%),var(--ink
 .game-body h4{margin:0;font:600 24px var(--serif);color:var(--cream)}
 .game-body p{margin:0;font-size:14px;color:var(--muted);flex:1}
 .game-play{margin-top:8px;color:var(--gold2);font-size:12px;letter-spacing:.2em;text-transform:uppercase;font-weight:600}
-@media(max-width:900px){.game-grid{grid-template-columns:1fr 1fr}}
+@media(max-width:1100px){.game-grid{grid-template-columns:1fr 1fr}}
 @media(max-width:600px){.game-grid{grid-template-columns:1fr}}
 .video{border:1px solid var(--line);border-radius:12px;overflow:hidden;background:#020b18;box-shadow:0 18px 60px rgba(0,0,0,.25);margin-top:22px}
 .video iframe{width:100%;aspect-ratio:16/9;border:0;display:block}
@@ -393,7 +393,7 @@ I have also supported the commercialization of technologies across other domains
       <div>
         <div class="kicker" style="margin-bottom:12px">WITH PLAY · MINI ARCADE</div>
         <h3>Games I Built</h3>
-        <p>Small browser games made for fun. Quick to learn, free to play, and they work on phone or desktop.</p>
+        <p>Small browser games and a daily brain workout, made for fun. Quick to learn, free to play, and they work on phone or desktop.</p>
       </div>
       <a class="btn" href="https://ridhimaw.github.io/arcade/" target="_blank" rel="noopener">Visit the Arcade ↗</a>
     </div>
@@ -465,6 +465,29 @@ I have also supported the commercialization of technologies across other domains
         </div>
       </a>
 
+
+      <a class="game-card" href="https://ridhimaw.github.io/arcade/brain-gym/" target="_blank" rel="noopener">
+        <svg viewBox="0 0 320 200" role="img" aria-label="Brain Gym game preview">
+          <defs><radialGradient id="bgBg" cx="50%" cy="25%" r="80%"><stop offset="0" stop-color="#1b2c48"/><stop offset="1" stop-color="#0d1426"/></radialGradient></defs>
+          <rect width="320" height="200" fill="url(#bgBg)"/>
+          <g fill="#232a48">
+            <rect x="113" y="27" width="22" height="22" rx="4"/><rect x="165" y="27" width="22" height="22" rx="4"/><rect x="191" y="27" width="22" height="22" rx="4"/>
+            <rect x="113" y="53" width="22" height="22" rx="4"/><rect x="139" y="53" width="22" height="22" rx="4"/><rect x="191" y="53" width="22" height="22" rx="4"/>
+            <rect x="139" y="79" width="22" height="22" rx="4"/><rect x="165" y="79" width="22" height="22" rx="4"/><rect x="191" y="79" width="22" height="22" rx="4"/>
+            <rect x="113" y="105" width="22" height="22" rx="4"/><rect x="139" y="105" width="22" height="22" rx="4"/><rect x="165" y="105" width="22" height="22" rx="4"/>
+          </g>
+          <g fill="#2f5a5a"><rect x="139" y="27" width="22" height="22" rx="4"/><rect x="165" y="53" width="22" height="22" rx="4"/><rect x="191" y="105" width="22" height="22" rx="4"/></g>
+          <rect x="113" y="79" width="22" height="22" rx="4" fill="#67c8a8"/>
+          <text x="114" y="50" text-anchor="end" font-family="Inter,Arial,sans-serif" font-weight="800" font-size="27" fill="#ec6461">BLUE</text>
+          <path d="M252 30l5.5 11.5 12.5 1.5-9.2 8.6 2.4 12.4-11.2-6.2-11.2 6.2 2.4-12.4-9.2-8.6 12.5-1.5z" fill="#ffd654"/>
+          <text x="249" y="110" text-anchor="middle" font-family="Inter,Arial,sans-serif" font-weight="800" font-size="46" fill="#f2a04c">7</text>
+        </svg>
+        <div class="game-body">
+          <h4>Brain Gym</h4>
+          <p>A 5-minute daily workout for speed, memory, focus and flexibility. Every exercise adapts to your level.</p>
+          <span class="game-play">Play Brain Gym →</span>
+        </div>
+      </a>
     </div>
   </div>
 
