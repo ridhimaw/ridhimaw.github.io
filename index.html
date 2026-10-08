@@ -116,6 +116,33 @@ radial-gradient(circle at 85% 70%,rgba(90,43,112,.17),transparent 28%),var(--ink
 .dual{display:grid;grid-template-columns:1.25fr 1fr;gap:36px;align-items:start}
 .pane{border:1px solid var(--line);border-radius:12px;padding:32px;background:rgba(8,20,38,.4)}
 .pane .kicker{margin-bottom:14px}
+/* results strip */
+.results{padding-top:56px;padding-bottom:56px;background:linear-gradient(180deg,#061326,#0a1d36)}
+.results .kicker{margin-bottom:22px}
+.results-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:18px}
+.result.highlight-card{display:flex;flex-direction:column;gap:6px;padding:26px 24px 22px;border:1px solid var(--line);border-radius:12px}
+.result .r-num{font:600 58px/1 var(--serif);color:var(--gold2);margin-bottom:8px}
+.result .r-word{font-size:46px;line-height:1.1}
+.result .r-title{font:600 21px/1.2 var(--serif);color:#fff}
+.result .r-sub{font-size:13px;color:var(--muted)}
+.result .tap-note{margin-top:auto;padding-top:14px;font-size:11px;letter-spacing:.14em}
+@media(max-width:1000px){.results-grid{grid-template-columns:1fr 1fr}}
+@media(max-width:520px){.results{padding-top:40px;padding-bottom:40px}.results-grid{gap:12px}.result.highlight-card{padding:18px 16px 16px}.result .r-num{font-size:38px;margin-bottom:4px}.result .r-word{font-size:30px}.result .r-title{font-size:16px}.result .r-sub{font-size:12px}.result .tap-note{font-size:10px;padding-top:10px}}
+/* news project */
+.news-feature{margin-top:36px;display:grid;grid-template-columns:1.1fr 1fr;gap:34px;align-items:center;border:1px solid var(--line);border-radius:14px;padding:32px;background:linear-gradient(135deg,rgba(11,31,55,.7),rgba(53,32,78,.45))}
+.news-feature h3{font:600 clamp(28px,3vw,38px)/1.05 var(--serif);margin:0 0 12px;color:var(--cream)}
+.news-feature p{color:var(--muted);margin:0 0 16px}
+.news-tags{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:22px}
+.news-tags span{border:1px solid var(--line);border-radius:30px;padding:5px 12px;font-size:12px;color:var(--gold2)}
+.news-preview{border:1px solid var(--line);border-radius:12px;background:#040d1c;padding:18px 18px 8px;box-shadow:0 18px 50px rgba(0,0,0,.3)}
+.news-preview .np-head{display:flex;justify-content:space-between;align-items:center;margin-bottom:12px;font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--gold2)}
+.np-live{display:inline-flex;align-items:center;gap:6px;color:#7fd8b0}
+.np-live:before{content:"";width:7px;height:7px;border-radius:50%;background:#7fd8b0}
+.np-row{display:grid;grid-template-columns:auto 1fr;gap:12px;align-items:start;padding:12px 0;border-top:1px solid rgba(226,210,166,.15)}
+.np-tag{font-size:10px;letter-spacing:.12em;text-transform:uppercase;border-radius:4px;padding:3px 7px;background:rgba(217,189,122,.15);color:var(--gold2);white-space:nowrap}
+.np-line{height:8px;border-radius:4px;background:rgba(247,241,229,.22);margin:4px 0 7px}
+.np-line.short{width:60%;background:rgba(247,241,229,.12)}
+@media(max-width:900px){.news-feature{grid-template-columns:1fr;padding:24px}}
 /* games */
 .games{margin-bottom:40px}
 .games-head{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:flex-end;gap:16px;margin-bottom:20px}
@@ -259,6 +286,48 @@ radial-gradient(circle at 85% 70%,rgba(90,43,112,.17),transparent 28%),var(--ink
   </div>
 </header>
 
+<section class="results" id="highlights" aria-label="Highlights">
+  <div class="kicker">Some Highlights</div>
+  <div class="results-grid">
+    <button class="result highlight-card" type="button" data-title="Tech Transfers Led" data-label="03 · END TO END" data-copy="I led the technology transfer process end to end for three technologies in the disaster management domain, from evaluation and IP considerations through to licensing.
+
+I have also supported several other technology transfers and commercialization efforts across domains, including industrial design and engineering.">
+      <span class="r-num">03</span>
+      <span class="r-title">Tech transfers led end to end</span>
+      <span class="r-sub">Several others supported</span>
+      <span class="tap-note">View story →</span>
+    </button>
+    <button class="result highlight-card" type="button" data-title="Registered Indian Trademark Agent" data-label="INDIA · TRADEMARKS" data-copy="A registered Indian Trademark Agent, authorized to file and prosecute trademark applications in India.">
+      <span class="r-num r-word">TM</span>
+      <span class="r-title">Registered Indian Trademark Agent</span>
+      <span class="r-sub">Professional qualification</span>
+      <span class="tap-note">View detail →</span>
+    </button>
+    <button class="result highlight-card" type="button" data-title="Copyright Assignments" data-label="COPYRIGHT" data-copy="Managed copyright assignments, including for a film and media firm.">
+      <span class="r-num r-word">©</span>
+      <span class="r-title">Managed copyright assignments</span>
+      <span class="r-sub">Including film &amp; media</span>
+      <span class="tap-note">View detail →</span>
+    </button>
+    <button class="result highlight-card" type="button" data-title="Candidate RTTP" data-label="PROFESSIONAL DEVELOPMENT" data-copy="Candidate for Registered Technology Transfer Professional (RTTP), an international professional recognition for technology transfer and knowledge exchange practitioners.">
+      <span class="r-num r-word">RTTP</span>
+      <span class="r-title">Candidate RTTP</span>
+      <span class="r-sub">Registered Technology Transfer Professional</span>
+      <span class="tap-note">View detail →</span>
+    </button>
+  </div>
+  <div class="highlight-modal" id="highlightModal" aria-hidden="true">
+    <div class="highlight-backdrop" data-close-highlight></div>
+    <div class="highlight-dialog" role="dialog" aria-modal="true" aria-labelledby="highlightModalTitle">
+      <button class="modal-close" type="button" aria-label="Close" data-close-highlight>×</button>
+      <div class="kicker" id="highlightModalLabel"></div>
+      <h3 id="highlightModalTitle"></h3>
+      <p id="highlightModalCopy"></p>
+    </div>
+  </div>
+
+</section>
+
 <section class="section-dark" id="work">
   <h2 class="section-title">Things I've worked on</h2>
   <p class="section-intro">My work sits at the intersection of <b>IP, technology, and business development</b> — moving ideas from concept to protection, partnerships, and impact. Tap a card for a quick example.</p>
@@ -316,37 +385,26 @@ radial-gradient(circle at 85% 70%,rgba(90,43,112,.17),transparent 28%),var(--ink
     </article>
 
   </div>
+
+  <div class="news-feature">
+    <div>
+      <div class="kicker" style="margin-bottom:12px">SOMETHING I BUILT · LIVE PROJECT</div>
+      <h3>IP &amp; Tech Transfer Pulse</h3>
+      <p>A news site I built and curate that updates itself every day. It gathers the latest on patents, licensing, university spin-offs, innovation policy and technology transfer, with a dedicated India section, all from open, non-paywalled sources.</p>
+      <div class="news-tags"><span>Patents</span><span>Licensing</span><span>Tech Transfer</span><span>Policy</span><span>India</span></div>
+      <a class="btn primary" href="https://ridhimaw.github.io/ip-techtransfer-news/" target="_blank" rel="noopener">Read Today's Pulse ↗</a>
+    </div>
+    <a class="news-preview" href="https://ridhimaw.github.io/ip-techtransfer-news/" target="_blank" rel="noopener" aria-label="Open IP and Tech Transfer Pulse" style="text-decoration:none;display:block">
+      <div class="np-head"><span>Daily digest</span><span class="np-live">Auto-updated</span></div>
+      <div class="np-row"><span class="np-tag">Tech Transfer</span><div><div class="np-line"></div><div class="np-line short"></div></div></div>
+      <div class="np-row"><span class="np-tag">Patents</span><div><div class="np-line"></div><div class="np-line short"></div></div></div>
+      <div class="np-row"><span class="np-tag">India</span><div><div class="np-line"></div><div class="np-line short"></div></div></div>
+      <div class="np-row"><span class="np-tag">Licensing</span><div><div class="np-line"></div><div class="np-line short"></div></div></div>
+    </a>
+  </div>
 </section>
 
-<section class="highlights" id="highlights">
-  <h2 class="section-title" style="font-size:clamp(28px,3vw,38px);margin-bottom:4px">Some Highlights</h2>
-  <div class="strip highlights-grid">
-    <button class="strip-item highlight-card" type="button" data-title="Tech Transfers Led" data-label="03 · DISASTER MANAGEMENT" data-copy="I led the technology transfer process from start to finish for three technologies in the disaster management domain — from evaluation and IP considerations through to licensing.
-
-I have also supported the commercialization of technologies across other domains, including industrial design and engineering.">
-      <span class="num">03</span><span class="label">TECH TRANSFERS LED</span><p>Disaster management</p><span class="tap-note">View story →</span>
-    </button>
-    <button class="strip-item highlight-card" type="button" data-title="Indian Trademark Agent" data-label="INDIA · TRADEMARKS" data-copy="A registered Indian Trademark Agent, authorized to file trademark applications in India.">
-      <span class="num num-word">INDIA</span><span class="label">TRADEMARK AGENT</span><p>Registered professional qualification</p><span class="tap-note">View detail →</span>
-    </button>
-    <button class="strip-item highlight-card" type="button" data-title="Copyright Assignment" data-label="01 · FILM & MEDIA" data-copy="Managed a copyright assignment for a film and media firm.">
-      <span class="num">01</span><span class="label">COPYRIGHT ASSIGNMENT</span><p>Film & media</p><span class="tap-note">View detail →</span>
-    </button>
-    <button class="strip-item highlight-card" type="button" data-title="c-RTTP" data-label="PROFESSIONAL DEVELOPMENT" data-copy="Candidate — Registered Technology Transfer Professional (RTTP), an international professional recognition for technology transfer and knowledge exchange practitioners.">
-      <span class="num num-rtpp">c-RTTP</span><span class="label">CANDIDATE</span><p>Technology transfer professional pathway</p><span class="tap-note">View detail →</span>
-    </button>
-  </div>
-
-  <div class="highlight-modal" id="highlightModal" aria-hidden="true">
-    <div class="highlight-backdrop" data-close-highlight></div>
-    <div class="highlight-dialog" role="dialog" aria-modal="true" aria-labelledby="highlightModalTitle">
-      <button class="modal-close" type="button" aria-label="Close" data-close-highlight>×</button>
-      <div class="kicker" id="highlightModalLabel"></div>
-      <h3 id="highlightModalTitle"></h3>
-      <p id="highlightModalCopy"></p>
-    </div>
-  </div>
-
+<section class="highlights" id="curious">
   <div class="curious-head">
     <div>
       <div class="kicker">What I'm exploring now</div>
